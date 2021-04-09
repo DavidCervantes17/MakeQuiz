@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "854777721573",
+    "project_id": "aplicacionesmoviles-b74fd",
+    "storage_bucket": "aplicacionesmoviles-b74fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854777721573:android:4a7804ac6549cc4e645a0c",
+        "android_client_info": {
+          "package_name": "com.virtuallabs.makequiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854777721573-ud3ogbdd17q59g06063lgjp1n66fblj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHEirNsGXLP_fGXm5d9DpXGm4yD6AzsGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854777721573-ud3ogbdd17q59g06063lgjp1n66fblj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
