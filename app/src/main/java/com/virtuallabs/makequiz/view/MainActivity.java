@@ -23,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText pregunta, respuesta;
     Button enviar;
     TextView tv;
-
     List<Item> items = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 item.put("pregunta", pregunta.getText().toString());
                 item.put("respuesta", respuesta.getText().toString());
 
-                Item miCuestionario = new Item();
-                miCuestionario.setPregunta(pregunta.getText().toString());
-                miCuestionario.setRespuesta(respuesta.getText().toString());
-                items.add(miCuestionario);
-
-                Controller.controller(MainActivity.this,item);
+                Controller.controller(MainActivity.this,item, pregunta, respuesta, items);
 
                 StringBuilder sb = new StringBuilder();
 
