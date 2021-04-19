@@ -25,4 +25,6 @@ public class Item {
         return "\n"+pregunta+": "+respuesta;
     }
 
+    static class FirebaseConnect {
+    }
 }
