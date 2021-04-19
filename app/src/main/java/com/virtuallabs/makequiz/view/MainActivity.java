@@ -39,25 +39,12 @@ public class MainActivity extends AppCompatActivity {
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Log.d("PREGUNTA",pregunta.getText().toString());
-                //Log.d("RESPUESTA",respuesta.getText().toString());
 
-                Map<String, Object> item = new HashMap<>();
-                item.put("pregunta", pregunta.getText().toString());
-                item.put("respuesta", respuesta.getText().toString());
-
-                Controller.controller(MainActivity.this,item, pregunta, respuesta, items);
+                Controller.controller(MainActivity.this, pregunta, respuesta, items);
 
                 StringBuilder sb = new StringBuilder();
-
-                for (Item s : items)
-                {
-                    sb.append(s);
-                }
-                Log.d("String",sb.toString());
-
+                for (Item s : items) { sb.append(s); }
                 tv.setText(sb.toString());
-
                 pregunta.setText("");
                 respuesta.setText("");
             }
