@@ -15,11 +15,15 @@ import com.virtuallabs.makequiz.data.FirebaseConnect;
 import com.virtuallabs.makequiz.data.Item;
 import com.virtuallabs.makequiz.view.MainActivity;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Controller {
-    public static void controller (final Context context, Map<String, Object> item, EditText pregunta, EditText respuesta, List<Item> items){
+    public static void controller (final Context context, EditText pregunta, EditText respuesta, List<Item> items, StringBuilder sb){
+        Map<String, Object> item = new HashMap<>();
+        item.put("pregunta", pregunta.getText().toString());
+        item.put("respuesta", respuesta.getText().toString());
 
         Item miCuestionario = new Item();
         miCuestionario.setPregunta(pregunta.getText().toString());
@@ -42,6 +46,10 @@ public class Controller {
                         Log.w("TAG", "Error adding document", e);
                     }
                 });
+
+        for (Item s : items) {
+            sb.append(s);
+        }
 
     }
 

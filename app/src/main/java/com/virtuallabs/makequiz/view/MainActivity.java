@@ -14,9 +14,7 @@ import com.virtuallabs.makequiz.controller.Controller;
 import com.virtuallabs.makequiz.data.Item;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button enviar;
     TextView tv;
     List<Item> items = new ArrayList<>();
+    StringBuilder sb = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,29 +38,13 @@ public class MainActivity extends AppCompatActivity {
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Log.d("PREGUNTA",pregunta.getText().toString());
-                //Log.d("RESPUESTA",respuesta.getText().toString());
 
-                Map<String, Object> item = new HashMap<>();
-                item.put("pregunta", pregunta.getText().toString());
-                item.put("respuesta", respuesta.getText().toString());
-
-                Controller.controller(MainActivity.this,item, pregunta, respuesta, items);
-
-                StringBuilder sb = new StringBuilder();
-
-                for (Item s : items)
-                {
-                    sb.append(s);
-                }
-                Log.d("String",sb.toString());
+                Controller.controller(MainActivity.this, pregunta, respuesta, items, sb);
 
                 tv.setText(sb.toString());
-
                 pregunta.setText("");
                 respuesta.setText("");
             }
         });
-
     }
 }
