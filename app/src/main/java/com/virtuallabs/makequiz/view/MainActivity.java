@@ -1,22 +1,15 @@
 package com.virtuallabs.makequiz.view;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.virtuallabs.makequiz.R;
 import com.virtuallabs.makequiz.controller.Controller;
 import com.virtuallabs.makequiz.data.Item;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
